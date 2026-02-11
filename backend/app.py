@@ -29,3 +29,7 @@ if __name__ == '__main__':
     print("=" * 40)
     print("Сервер запущен")
     print("API доступен по адресу: http://localhost:5000")
+    print("Фронтенд: frontend/index.html")
+    print("=" * 40)
+
+    app.run(debug=True, host='0.0.0.0', port=5000)
