@@ -22,5 +22,5 @@ def read_book(book_id: int):
 
 @app.post("/books", status_code=status.HTTP_201_CREATED)
 def create_book(book: BookCreate):
-    book_id = crud.create_book(book.model_dump())
+    book_id = crud.create_books(book.model_dump())
     return {"message": "Запись создана", "id": book_id}

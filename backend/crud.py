@@ -1,3 +1,4 @@
+from backend.schemas import BookCreate
 from database import get_connection
 
 def get_all_books():
@@ -11,3 +12,6 @@ def get_book_by_id(book_id: int):
     row = conn.execute("SELECT*FROM books WHERE id = ?", (book_id,)).fetchone()
     conn.close()
     return dict(row) if row else None
+
+def create_book(book: BookCreate):
+    conn = get_connection()

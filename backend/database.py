@@ -18,4 +18,5 @@ def init_db():
             available BOOLEAN
     """)
     conn.commit()
+
     conn.close()

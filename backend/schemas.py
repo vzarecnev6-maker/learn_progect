@@ -19,6 +19,7 @@ class BookPatch(BaseModel):
     author: str | None = None
     available: bool | None = None
 
+
 class BookRead(BaseModel):
     id: int
     title: str
